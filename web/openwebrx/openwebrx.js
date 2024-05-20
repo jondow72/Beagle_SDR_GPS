@@ -1072,6 +1072,7 @@ var passbands_fallback = {
 	am:		{ lo: -4900,	hi:  4900 },            // 9.8 kHz instead of 10 to avoid adjacent channel heterodynes in SW BCBs
 	amn:		{ lo: -2500,	hi:  2500 },
 	amw:		{ lo: -6000,	hi:  6000 },            // FIXME: set based on current srate?
+	amu:		{ lo: -7000,	hi:  7000 },            // FIXME: set based on current srate?
 	sam:		{ lo: -4900,	hi:  4900 },
 	sal:		{ lo: -4900,	hi:     0 },
 	sau:		{ lo:     0,	hi:  4900 },
@@ -1227,6 +1228,7 @@ function demodulator_default_analog(offset_frequency, subtype, locut, hicut)
 	   case 'am':
 	   case 'amn':
 	   case 'amw':
+	   case 'amu':
 	   case 'sam':
 	   case 'sal':
 	   case 'sau':
@@ -6270,6 +6272,7 @@ var up_down = {
 	am:   [ 0, -1, -0.1, 0.1, 1, 0 ],
 	amn:  [ 0, -1, -0.1, 0.1, 1, 0 ],
 	amw:  [ 0, -1, -0.1, 0.1, 1, 0 ],
+	amu:  [ 0, -1, -0.1, 0.1, 1, 0 ],
 	sam:  [ 0, -1, -0.1, 0.1, 1, 0 ],
 	sal:  [ 0, -1, -0.1, 0.1, 1, 0 ],
 	sau:  [ 0, -1, -0.1, 0.1, 1, 0 ],
@@ -12300,7 +12303,7 @@ function restore_passband(mode)
 }
 
 var mode_buttons = [
-   { s:[ 'AM', 'AMN', 'AMW' ],                  dis:0 },
+   { s:[ 'AM', 'AMN', 'AMW', 'AMU' ],           dis:0 },
    { s:[ 'SAM', 'SAL', 'SAU', 'SAS', 'QAM' ],   dis:0 },
    { s:[ 'DRM' ],                               dis:0 },
    { s:[ 'LSB', 'LSN' ],                        dis:0 },

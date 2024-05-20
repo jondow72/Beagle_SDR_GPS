@@ -772,7 +772,8 @@ void c2s_sound(void *param)
             
             case MODE_AM:
             case MODE_AMN:
-            case MODE_AMW: {
+            case MODE_AMW:
+            case MODE_AMU: {
                 // AM detector from CuteSDR
                 TYPECPX *agc_samps_c = rx->agc_samples_c;
                 m_Agc[rx_chan].ProcessData(ns_out, fir_samps_c, agc_samps_c);

@@ -2,6 +2,9 @@ CHANGE_LOG
 
 For the Github commit log see here: github.com/jks-prv/Beagle_SDR_GPS/commits/master
 
+    Added AM ultra wide mode. AM mode button now toggles AM => AMN => AMW => AMU => AM ...
+    AMW default passband values available on the admin config tab.
+
 v1.682  May 19, 2024
     Fixed problem that prevented the new ipset+iptables blacklist filtering from actually working.
     Filtering was occurring (less efficiently) in the Kiwi server instead. (thanks Stefan HB9TMC)

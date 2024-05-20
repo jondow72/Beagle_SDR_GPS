@@ -26,12 +26,12 @@ Boston, MA  02110-1301, USA.
 
 const char * const mode_lc[] = {
     "am", "amn", "usb", "lsb", "cw", "cwn", "nbfm", "iq", "drm",
-    "usn", "lsn", "sam", "sau", "sal", "sas", "qam", "nnfm", "amw"
+    "usn", "lsn", "sam", "sau", "sal", "sas", "qam", "nnfm", "amw", "amu"
 };
 
 const char * const mode_uc[] = {
     "AM", "AMN", "USB", "LSB", "CW", "CWN", "NBFM", "IQ", "DRM",
-    "USN", "LSN", "SAM", "SAU", "SAL", "SAS", "QAM", "NNFM", "AMW"
+    "USN", "LSN", "SAM", "SAU", "SAL", "SAS", "QAM", "NNFM", "AMW", "AMU"
 };
 
 #define IS_AM       0x0001
@@ -46,6 +46,7 @@ const char * const mode_uc[] = {
 #define IS_STEREO   0x0200
 #define IS_NARROW   0x0400
 #define IS_WIDE     0x0800
+#define IS_UWIDE    0x1600
 
 const int mode_flags[] = {
     IS_AM, IS_AM|IS_NARROW,
@@ -55,20 +56,20 @@ const int mode_flags[] = {
     IS_IQ|IS_STEREO, IS_DRM|IS_STEREO,
     IS_SSB|IS_USB|IS_NARROW, IS_SSB|IS_LSB|IS_NARROW,
     IS_SAM, IS_SAM, IS_SAM, IS_SAM|IS_STEREO, IS_SAM|IS_STEREO, IS_NBFM|IS_NARROW,
-    IS_AM|IS_WIDE
+    IS_AM|IS_WIDE|IS_UWIDE
 };
 
 const int mode_hbw[] = {
     9800/2, 5000/2, 2400/2, 2400/2, 400/2, 60/2, 12000/2, 10000/2, 10000/2,
-    2100/2, 2100/2, 9800/2, 9800/2, 9800/2, 9800/2, 9800/2, 6000/2, 12000/2
+    2100/2, 2100/2, 9800/2, 9800/2, 9800/2, 9800/2, 9800/2, 6000/2, 12000/2, 14000/2
 };
 
 const int mode_offset[] = {
     0, 0, 1500, -1500, 0, 0, 0, 0, 0,
-    1350, -1350, 0, 0, 0, 0, 0, 0, 0
+    1350, -1350, 0, 0, 0, 0, 0, 0, 0, 0
 };
 
 typedef enum {
     MODE_AM, MODE_AMN, MODE_USB, MODE_LSB, MODE_CW, MODE_CWN, MODE_NBFM, MODE_IQ, MODE_DRM,
-    MODE_USN, MODE_LSN, MODE_SAM, MODE_SAU, MODE_SAL, MODE_SAS, MODE_QAM, MODE_NNFM, MODE_AMW
+    MODE_USN, MODE_LSN, MODE_SAM, MODE_SAU, MODE_SAL, MODE_SAS, MODE_QAM, MODE_NNFM, MODE_AMW, MODE_AMU
 } mode_e;

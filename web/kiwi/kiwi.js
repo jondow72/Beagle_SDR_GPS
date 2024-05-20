@@ -74,12 +74,12 @@ var kiwi = {
    // CAUTION: must match order in mode.h
    // CAUTION: add new entries at the end
    modes_lc: [ 'am', 'amn', 'usb', 'lsb', 'cw', 'cwn', 'nbfm', 'iq', 'drm',
-              'usn', 'lsn', 'sam', 'sau', 'sal', 'sas', 'qam', 'nnfm', 'amw' ],
+              'usn', 'lsn', 'sam', 'sau', 'sal', 'sas', 'qam', 'nnfm', 'amw', 'amu' ],
    modes_uc: [],
    modes_idx: {},
    
    // order that modes appear in menus as opposed to new-entry-appending behavior of kiwi.modes_lc
-   mode_menu: [ 'AM', 'AMN', 'AMW', 'USB', 'USN', 'LSB', 'LSN', 'CW', 'CWN', 'NBFM', 'NNFM',
+   mode_menu: [ 'AM', 'AMN', 'AMW', 'AMU', 'USB', 'USN', 'LSB', 'LSN', 'CW', 'CWN', 'NBFM', 'NNFM',
                 'IQ', 'DRM', 'SAM', 'SAU', 'SAL', 'SAS', 'QAM' ],
 
    
